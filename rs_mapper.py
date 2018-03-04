@@ -4,7 +4,7 @@ import sys
 import string
 import re
 
-count = 0
+subsamp = 0
 
 # input comes from STDIN (standard input)
 for line in sys.stdin:
@@ -18,6 +18,8 @@ for line in sys.stdin:
 
     # using the position in the book as key to avoid sorting alphabeltically 
     for word in words:
-        count += 1
-        print '%s\t%s\t%s' % (count, word, 1)
+        subsamp += 1
+        print '%s\t%s\t%s' % (subsamp, word, 1)
+        if subsamp > 10000:
+            subsamp = 0
         
