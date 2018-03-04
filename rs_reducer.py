@@ -12,7 +12,7 @@ save = []
 
 # input comes from STDIN
 for line in sys.stdin:
-    item = line.split('\t', 1)[0]
+    item = line.split('\t', 2)[1]
 
     N += 1 
     if count < K:
