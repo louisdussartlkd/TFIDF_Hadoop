@@ -1,15 +1,17 @@
 #!/usr/bin/python
 
+import sys
 from random import randint
 import string
 import re
 
 
 # input comes from STDIN (standard input)
-for line in lines:
+for line in sys.stdin:
     # remove leading and trailing whitespace and punctuation
     line = line.strip()
     line = re.sub('['+string.punctuation+']', '', line)
+
     # split the line into words
     words = line.split()
     # increase counters
