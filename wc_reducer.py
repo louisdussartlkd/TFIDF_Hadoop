@@ -12,8 +12,8 @@ for line in sys.stdin:
     # remove leading and trailing whitespace
     line = line.strip()
 
-    # parse the input we got from mapper.py
-    word, key, count = line.split('\t', 1)
+    # parse the input we got from wc_mapper.py with the id (thus having 2 spaces, we need to split from the end to keep the id) 
+    word, count = line.rsplit('\t', 1)
 
     # convert count (currently a string) to int
     try:
