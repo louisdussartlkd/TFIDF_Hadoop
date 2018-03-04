@@ -8,11 +8,11 @@ import sys
 for line in sys.stdin:
     # split the pairs into word and key
     pairs = line.split()
-
-    for pair in pairs:
         # write the results to STDOUT (standard output);
         # what we output here will be the input for the
         # Reduce step, i.e. the input for reducer.py
-        #
+        # Keeping the ID for future reference
         # tab-delimited; the trivial word count is 1
-        print '%s\t%s\t%s' % (pair[0],pair[1], 1)
+    print '%s\t%s\t%s' % (pairs[0],pairs[1], 1)
+
+   
