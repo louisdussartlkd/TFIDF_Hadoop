@@ -17,4 +17,4 @@ for line in sys.stdin:
     # increase counters
     for word in words:
     #add a random number between 0 and 10000 as a key
-        print '%s\t%s' % (word, randint(0,10000))
+        print '%s\t%s' % (word, randint(0,1000))

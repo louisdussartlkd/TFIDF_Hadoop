@@ -5,7 +5,7 @@ import sys
 import random
 
 
-key_val = set(random.sample(range(0, 10000), 10))
+key_val = set(random.sample(range(0, 1000), 10))
 out_key = random.randint(0,10000)
 
 # input comes from STDIN
