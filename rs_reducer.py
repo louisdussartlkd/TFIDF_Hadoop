@@ -24,4 +24,4 @@ for line in sys.stdin:
             save[s] = item
 
 for i in save:
-  print '%s/t%s' % (i,key)
+  print '%s\t%s' % (i,key)
