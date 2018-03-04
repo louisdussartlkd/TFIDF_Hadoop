@@ -4,6 +4,7 @@ import sys
 import string
 import re
 
+count = 0
 
 # input comes from STDIN (standard input)
 for line in sys.stdin:
@@ -15,5 +16,8 @@ for line in sys.stdin:
     # split the line into words
     words = line.split()
 
+    # using the position in the book as key to avoid sorting alphabeltically 
     for word in words:
-        print '%s\t%s' % (word, 1)
+        count += 1
+        print '%s\t%s' % (word, count)
+        
