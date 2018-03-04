@@ -13,7 +13,7 @@ for line in sys.stdin:
     line = line.strip()
 
     # parse the input we got from mapper.py
-    word, count = line.split('\t', 1)
+    word, key, count = line.split('\t', 1)
 
     # convert count (currently a string) to int
     try:
