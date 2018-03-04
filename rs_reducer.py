@@ -4,25 +4,24 @@
 import sys
 import random
 
-
-key_val = set(random.sample(range(0, 1000), 10))
-out_key = random.randint(0,10000)
+count = 0
+N = 0
+K=200
+key = random.randint(0,10000)
+save = []
 
 # input comes from STDIN
 for line in sys.stdin:
-    # remove leading and trailing whitespace
-    line = line.strip()
+    item = line.split('\t', 1)[0]
 
-    # parse the input we got from RS_mapper.py
-    couple = line.split('\t')
-    word = couple[0]
-    key = int(couple[1])
+    N += 1 
+    if count < K:
+        save.append(item)
+        count += 1
+    else: 
+        s = random.randint(0,N)
+        if s < K:
+            save[s] = item
 
-    # print key_val,key
-    try:
-        if key in key_val:
-            print '%s\t%s' % (word, out_key)
-    except ValueError:
-        # key was not a number, so silently
-        # ignore/discard this line
-        continue
+for i in save:
+  print '%s/t%s' % (i,key)
