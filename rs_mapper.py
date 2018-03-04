@@ -19,5 +19,5 @@ for line in sys.stdin:
     # using the position in the book as key to avoid sorting alphabeltically 
     for word in words:
         count += 1
-        print '%s\t%s' % (word, count)
+        print '%s\t%s\t%s' % (count, word, 1)
         
